@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Access</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container" id="screen">
+
+    <!-- ACCESS SCREEN -->
+    <div id="access">
+        <h2>Private Access</h2>
+        <p>Enter your birthday</p>
+
+        <div class="input-group">
+            <input id="dd" placeholder="DD" maxlength="2" inputmode="numeric">
+            <span class="slash">/</span>
+            <input id="mm" placeholder="MM" maxlength="2" inputmode="numeric">
+            <span class="slash">/</span>
+            <input id="yy" placeholder="YY" maxlength="2" inputmode="numeric">
+        </div>
+
+        <button onclick="checkDate()">Continue</button>
+    </div>
+
+    <!-- START SCREEN -->
+    <div id="start" class="hidden">
+        <h2>Access Granted</h2>
+        <button onclick="startNote()">START</button>
+    </div>
+
+    <!-- NOTE SCREEN -->
+    <div id="noteScreen" class="hidden">
+        <div id="note"></div>
+
+        <button id="numberBtn" class="hidden" onclick="handleNumber1()">Number 1</button>
+        <button id="number2Btn" class="hidden" onclick="handleNumber2()">Number 2</button>
+        <button id="number3Btn" class="hidden" onclick="handleNumber3()">Number 3</button>
+
+        <!-- Audio for Number 3 -->
+        <audio id="finalAudio">
+            <source src="stephen-sanchez-em-beihold-until-i-found-you-lyrics-ytsavetubeme_3NnlHZat.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Background song -->
+        <audio id="bgSong" loop>
+            <source src="Night Changes Song Download Mp3.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
