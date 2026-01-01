@@ -78,7 +78,9 @@ function startNote(){
 }
 
 /* ---------- MESSAGES ---------- */
-const introMessage = `I am very very sorry for everything enaku enna solrathu nu therla unta 
+const introMessage = `I am very very sorry for everything unkitt n rmba rude ah irunthu irukan like frnds tha but neraya tym sanda potu irukan ethuku ne theriama reason eh ilama athuvum unna rmba neraya visayathuku rules maari la potta mari iruku athe pana koodatha ivanga kooda pesakoodathu i am so sorry for that enna manuchudu athukaga na unnat enta thirumbi pesala venam nu solran nee vera nalla best frnd ah puduchuko na rmmba rmba mosamanavan neraya per ooda boy girl friendship pathi ketan avan sonathu la ethubume pana unmai ah illa sanda podama illa unakaga na nipan but therla na ninnan ah sry. keela irukura message la na unta solanum nenchu rmba naal munadi ready pannan paru but ethuvum kandukatha pudikalana close panidu pathila thank you.
+
+enaku enna solrathu nu therla unta 
 ithe nerla pathu solalnum thonuchu
  but nee athukana chance ah kudukala nanum create pana try panala.
  
@@ -288,10 +290,14 @@ function moveButton(){
 
 function finalLove(){
     noteScreen.innerHTML = "";
+
+    playFinalSong(0.9); // ▶ final page song ONLY
+
     crackers();
-    const t=document.createElement("div");
-    t.className="love-end";
-    t.innerHTML="LOVE YOU<br>× 300000";
+
+    const t = document.createElement("div");
+    t.className = "love-end";
+    t.innerHTML = "LOVE YOU<br>× 300000";
     noteScreen.appendChild(t);
 }
 
@@ -317,4 +323,18 @@ function createLoveFloat(){
 function playSong(v=0.5){
     const s=document.getElementById("bgSong");
     if(s){s.volume=v;s.play().catch(()=>{});}
+}
+
+function playFinalSong(v = 0.8){
+    const bg = document.getElementById("bgSong");
+    if (bg) {
+        bg.pause();
+        bg.currentTime = 0;
+    }
+
+    const fs = document.getElementById("finalSong");
+    if (fs) {
+        fs.volume = v;
+        fs.play().catch(() => {});
+    }
 }
