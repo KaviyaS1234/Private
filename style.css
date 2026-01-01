@@ -1,3 +1,10 @@
+html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
 *{
     margin:0;
     padding:0;
@@ -95,15 +102,14 @@ button:disabled{opacity:0.4;pointer-events:none;}
 .hidden{display:none;}
 
 /* NOTE / TYPEWRITER */
-#note{
-    text-align:left;
-    font-size:14px;
-    line-height:1.75;
-    white-space:pre-wrap;
-    min-height:220px;
-    margin-bottom:18px;
-    letter-spacing:0.2px;
+#note {
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
 }
+
 
 .char{
     opacity:0;
@@ -149,7 +155,7 @@ button:disabled{opacity:0.4;pointer-events:none;}
 /* LOVE MODE */
 body.love-mode{
     background:linear-gradient(160deg,#ff9a9e,#fad0c4,#fbc2eb);
-    overflow:hidden;
+    
 }
 
 .love-float{
