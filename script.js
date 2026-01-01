@@ -338,3 +338,23 @@ function playFinalSong(v = 0.8){
         fs.play().catch(() => {});
     }
 }
+
+function playFirstSong(v = 0.4){
+    stopAllSongs();
+
+    const fs = document.getElementById("firstSong");
+    if (fs) {
+        fs.volume = v;
+        fs.play().catch(() => {});
+    }
+}
+
+function stopAllSongs(){
+    ["firstSong", "bgSong", "finalSong"].forEach(id => {
+        const a = document.getElementById(id);
+        if (a) {
+            a.pause();
+            a.currentTime = 0;
+        }
+    });
+}
