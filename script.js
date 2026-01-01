@@ -143,10 +143,7 @@ so ithuku aprm pirachana illa
 
 Thanks for giving your time`;
 
-const tamilProverb = `காதல் என்பது
-பார்த்த கணம் அல்ல…
-பிரிந்து இருந்தாலும்
-மனதில் நிற்கும் உணர்வு.`;
+const tamilProverb = `Ithula nee enna click kudutha nu elam theriatha. Okay nu message panalam ilana Call Panna Nalla Irukum..Ada Nalla Irukum..`;
 
 /* ---------- NUMBER 1 ---------- */
 function handleNumber1(){
@@ -270,8 +267,8 @@ if (oldActions) oldActions.remove();
     const actions = document.createElement("div");
     actions.className = "final-actions";
     actions.innerHTML = `
-        <button class="runaway" id="loveRun">Love you too ❤️</button>
-        <button class="still" onclick="endWithoutLove()">No love 😒</button>
+        <button class="runaway" id="loveRun">Okay</button>
+        <button class="still" onclick="endWithoutLove()">Sorry😒</button>
     `;
     noteScreen.appendChild(actions);
 
